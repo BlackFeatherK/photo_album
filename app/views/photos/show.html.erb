@@ -1,0 +1,6 @@
+<%= @photo.title %>
+<%= @photo.date %>
+<%= image_tag "/#{@photo.file_location}" %>
+<%= simple_format(@photo.description) %>
+
+<%= link_to "Back to index", photos_path %>
