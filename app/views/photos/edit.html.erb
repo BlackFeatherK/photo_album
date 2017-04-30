@@ -1,0 +1,15 @@
+<%= form_for @photo do |f| %>
+  <%= f.label :title, "Title" %>
+  <%= f.text_field :title %>
+
+  <%= f.label :date, "Date" %>
+  <%= f.text_field :date %>
+
+  <%= f.label :description, "Description" %>
+  <%= f.text_field :description %>
+
+  <%= f.label :file_location, "File Location" %>
+  <%= f.text_field :file_location %>
+
+  <%= f.submit "Update" %>
+<% end %>
