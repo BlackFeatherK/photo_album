@@ -1,12 +1,22 @@
-<ul>
-  <% @photos.each do |photo| %>
-    <li>
-      <%= photo.title %>
-      <%= link_to "Show", photo_path(photo) %>
-      <%= link_to "Edit", edit_photo_path(photo) %>
-      <%= link_to "Destroy", photo_path(photo), method: :delete, data: { confirm: "Are you sure?" } %>
-    </li>
-  <% end %>
-</ul>
+<div class="container">
+  <table class="table table-striped table-condensed">
+    <tr>
+      <th>Title</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Destroy</th>
+    </tr>
 
-<%= link_to "New Photo", new_photo_path %>
+    <% @photos.each do |photo| %>
+      <tr>
+        <td><%= photo.title %>
+        <td><%= link_to "Show", photo_path(photo) %>
+        <td><%= link_to "Edit", edit_photo_path(photo) %>
+        <td><%= link_to "Destroy", photo_path(photo), method: :delete, data: { confirm: "Are you sure?" } %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <%= link_to "New Photo", new_photo_path %>
+</div>
+  
