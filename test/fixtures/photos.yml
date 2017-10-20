@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  date: 2017-05-09
+  description: MyText
+  file_location: MyString
+  is_public: false
+  capacity: 1
+
+two:
+  title: MyString
+  date: 2017-05-09
+  description: MyText
+  file_location: MyString
+  is_public: false
+  capacity: 1
