@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-  before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :set_photo, only: [:show, :edit, :update, :destroy, :is_public]
 
   def index
     @photos = Photo.all
@@ -36,6 +36,10 @@ class PhotosController < ApplicationController
   def destroy
     @photo.destroy
     redirect_to photos_path
+  end
+
+  def is_public
+    @photo.update(is_public: !(@photo.is_public))
   end
 
   private
