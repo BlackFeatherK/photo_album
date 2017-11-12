@@ -1,5 +1,6 @@
-<div class="container">
+<div class="container text-success">
   <% if @photo.errors.present? %>
+    <%= link_to 'aaa', '/', class: 'text-success' %>
     <ul>
       <% @photo.errors.each do |error, message| %>
         <li><%= "#{error.capitalize} #{message}" %></li>

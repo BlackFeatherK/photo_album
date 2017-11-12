@@ -11,9 +11,9 @@ class PhotosController < ApplicationController
 
   def create
     @photo = Photo.new(photo_params)
-
     if @photo.save
       redirect_to photos_path
+      flash[:notice] = 'aaaaa'
     else
       render :new
     end
