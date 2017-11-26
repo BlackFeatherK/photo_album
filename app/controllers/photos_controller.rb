@@ -15,6 +15,7 @@ class PhotosController < ApplicationController
       redirect_to photos_path
       flash[:notice] = 'aaaaa'
     else
+      flash.now[:notice] = 'bbbbb'
       render :new
     end
   end
